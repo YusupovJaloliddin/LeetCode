@@ -1,27 +1,75 @@
-26. Remove Duplicates from Sorted Array
-
-var removeDuplicates = function(nums) {
-    for(let i=0;i<nums.length;i++){
-        if(typeof(nums[i]) == "number" && nums[i] === nums[i+1]){
-            nums.splice(i+1,1);
-            i -=1;
-        }
+//273- Integer to English Words
+const upToTwenty = [
+  "",
+  "One",
+  "Two",
+  "Three",
+  "Four",
+  "Five",
+  "Six",
+  "Seven",
+  "Eight",
+  "Nine",
+  "Ten",
+  "Eleven",
+  "Twelve",
+  "Thirteen",
+  "Fourteen",
+  "Fifteen",
+  "Sixteen",
+  "Seventeen",
+  "Eighteen",
+  "Nineteen",
+];
+const tens = [
+  "",
+  "Ten",
+  "Twenty",
+  "Thirty",
+  "Forty",
+  "Fifty",
+  "Sixty",
+  "Seventy",
+  "Eighty",
+  "Ninety",
+];
+const thousands = ["", "Thousand", "Million", "Billion"];
+function numToWords(num) {
+  if (num.toString().length > 12) return "TOO BIG";
+  if (num === 0) {
+    return "Zero";
+  }
+  let counter = 0;
+  let res = "";
+  while (num > 0) {
+    if (num % 1000 !== 0) {
+      res = `${getNums(num % 1000)} ${thousands[counter]} ${res}`;
     }
-    return nums.length;
+    num = Math.floor(num / 1000);
+    counter++;
+  }
+  let arr = res.split(" ");
+  arr = arr.filter((t) => {
+    if (t != "") return t;
+  });
+  res = arr.join(" ");
+  return res;
+}
+
+const getNums = (number) => {
+  if (number === 0) {
+    return "";
+  } else if (number < 20) {
+    return upToTwenty[number];
+  } else if (number < 100) {
+    return `${tens[Math.floor(number / 10)]} ${getNums(number % 10)}`;
+  } else {
+    return `${upToTwenty[Math.floor(number / 100)]} Hundred ${getNums(
+      number % 100
+    )}`;
+  }
 };
 
-console.log(removeDuplicates([-3,-1,0,0,0,3,3]))
-
-27. Remove Element
-var removeElement = function(nums, val) {
-    let k=0,n=nums.length;
-    for(let i=0;i<nums.length;i++){
-                if(nums[i] == val){
-                    nums.splice(i,1);
-                    i -=1;
-                    k++;
-                }
-            }
-            return k-n;
-        }
-console.log(removeElement([0,1,2,2,3,0,4,2],2));
+let testNum = 0;
+let result = numToWords(testNum);
+console.log(result);
