@@ -28,6 +28,7 @@
 
 
 //100.Same Tree
+
 // var isSameTree = function(p, q) {
 //     if(p===null&&q===null){return true}
 //     if((p===null&&q!==null) || (p!==null && q===null) || (p.val !== q.val)){return false}
@@ -66,3 +67,78 @@
 //     };
 // };
 
+// 58. Length of Last Word
+
+// let lengthOfLastWord = function (s) {
+//   const words = s.trim().split(" ");
+//   return words.length > 0 ? words[words.length - 1].length : 0;
+// };
+
+//66. Plus One
+
+// let plusOne = function(digits) {
+//     for(let i=digits.length-1;i>=0;i--){
+//         digits[i]++;
+//         if(digits[i]>9){
+//             digits[i]=0;
+//         }
+//         else{
+//             return digits;
+//         }
+//     }
+//     digits.unshift(1);
+//     return digits;
+// };
+
+//67. Add Binary
+
+// let addBinary = function (a, b) {
+//     // Resultant string
+//     let result = "";
+//     // Indices for a and b
+//     let i = a.length - 1;
+//     let j = b.length - 1;
+//     // Carry
+//     let carry = 0;
+//     while (i >= 0 || j >= 0) {
+//         // Sum of two bits
+//         let sum = carry;
+//         if (i >= 0) {
+//             sum += a[i--] - '0';
+//         }
+//         if (j >= 0) {
+//             sum += b[j--] - '0';
+//         }
+//         // Add the bit to the result
+//         result = sum % 2 + result;
+//         // Modify carry
+//         carry = parseInt(sum / 2);
+//     }
+//     // Final check if carry exists
+//     if (carry > 0) {
+//         result = 1 + result;
+//     }
+//     return result;
+// };
+
+//69-Sqrt(x)
+// Binary search approach
+let mySqrt = function(x) {
+    let left = 1;
+    let right = x;
+    // The square root of 0 or 1 is itself
+    if(x < 2) return x;
+
+    // Use binary search to find the square root or the whole number closest to the square root
+    while(left < right) {
+        // Find the mid point between left and right
+        const mid = Math.floor((left + right) / 2)
+        // Return the mid point if this is the square root
+        if(mid*mid === x) return mid
+        // If mid squared is greater than x then the answer must be on the left half of mid
+        else if(mid*mid >x) right = mid
+        // If mid squred is less than x then the answer must be on the right half of mid
+        else left = mid+1
+    }
+    return left - 1
+};
