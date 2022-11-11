@@ -26,6 +26,7 @@
 //         }
 // console.log(removeElement([0,1,2,2,3,0,4,2],2));
 
+
 //100.Same Tree
 // var isSameTree = function(p, q) {
 //     if(p===null&&q===null){return true}
@@ -33,6 +34,35 @@
 //     return isSameTree(p.left,q.left) && isSameTree(p.right,q.right)
 // };
 
-//509. Fibonacci Number
 
+//21. Merge Two Sorted Lists
+
+// let mergeTwoLists = function (l1, l2) {
+//     // If either list is empty, return the other list's node
+//     if (l1 == null) return l2;
+//     if (l2 == null) return l1;
+
+//     // If l1 is lower
+//     if (l1.val < l2.val) {
+//         l1.next = mergeTwoLists(l1.next, l2);
+//         return l1;
+//     }
+//     // If l2 is lower
+//     else {
+//         l2.next = mergeTwoLists(l1, l2.next);
+//         return l2;
+//     }
+// };
+
+//35. Search Insert Position
+
+// var solution = function(isBadVersion) {
+//     /**
+//      * @param {integer} n Total versions
+//      * @return {integer} The first bad version
+//      */
+//     return function(n) {
+        
+//     };
+// };
 
