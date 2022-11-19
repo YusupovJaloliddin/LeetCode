@@ -6,10 +6,12 @@
  *     this.right = (right===undefined ? null : right)
  * }
  */
+
 /**
  * @param {TreeNode} root
  * @return {number}
  */
+
 let minDepth = (root) => {
   if (!root) return 0;
   let depth = 0;
