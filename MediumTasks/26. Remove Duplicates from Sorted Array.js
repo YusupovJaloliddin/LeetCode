@@ -7,5 +7,3 @@ var removeDuplicates = function (nums) {
   }
   return nums.length;
 };
-
-console.log(removeDuplicates([-3, -1, 0, 0, 0, 3, 3]));
