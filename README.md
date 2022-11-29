@@ -22,6 +22,6 @@ I have started working on problems on the Leetcode platform and I believe it wil
 ```
 ```
 
-2.Alhamdulillah I solved problem 50 today, it was very good for me. We will do it inshaAllah my friends😊
+2.Alhamdulillah I solved problem 60 today, it was very good for me. We will do it inshaAllah my friends😊
 
 ```
