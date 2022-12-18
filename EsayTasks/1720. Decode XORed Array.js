@@ -5,4 +5,5 @@ var decode = function (encoded, first) {
   for (let i = 0; i < len; i++) {
     res[i + 1] = res[i] ^ encoded[i];
   }
+  return res;
 };
