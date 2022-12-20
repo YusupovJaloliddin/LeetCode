@@ -2,10 +2,6 @@
  * @param {string[]} words
  * @return {number}
  */
-/**
- * @param {string[]} words
- * @return {number}
- */
 const uniqueMorseRepresentations = (words) => {
   const result = [];
   const codes = [
