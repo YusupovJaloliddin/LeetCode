@@ -11,4 +11,3 @@ var reverseWords = function (s) {
 };
 
 console.log(reverseWords("Let's take LeetCode contest"));
-// console.log("salom".split("").reverse().join(""));
