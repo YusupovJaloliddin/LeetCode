@@ -30,6 +30,6 @@ I have started working on problems on the Leetcode platform and I believe it wil
 
 ```
 
-3.Alhamdulillah I solved problem 90 today, it was very good for me. We will do it inshaAllah my friends...😊
+3.Alhamdulillah I solved problem 90 today, it was very good for me. We will do it inshaAllah my friends😊
 
 ```
