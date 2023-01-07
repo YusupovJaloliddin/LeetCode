@@ -19,3 +19,4 @@ let helper = function (p, q) {
   if (p && q) return helper(p.left, q.right) && helper(p.right, q.left);
   return true;
 };
+//console.log(isSymmetric())
