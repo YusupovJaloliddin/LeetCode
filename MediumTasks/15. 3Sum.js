@@ -9,7 +9,6 @@ const threeSum = (nums) => {
     if (nums[0] + nums[1] + nums[2] === 0) return [nums];
     else return [];
   }
-  //console.log(nums);
 
   let result = [];
   let checker = "";
@@ -17,7 +16,6 @@ const threeSum = (nums) => {
   for (let i = 0; i < len; i++) {
     var sum = -nums[i];
     for (let j = i + 1, k = len - 1; j < k; ) {
-      //console.log(i + ', ' + j + ', ' + k + ': ' + nums[i] + ', ' + nums[j] + ', ' + nums[k]);
       var temp = nums[j] + nums[k];
       if (temp < sum) {
         j++;
@@ -27,15 +25,12 @@ const threeSum = (nums) => {
         var triplet = [nums[i], nums[j], nums[k]];
         result.push(triplet);
 
-        //skip j term if it's a duplicate
         while (nums[j] === nums[j + 1] && j < len) j++;
-        //skip k term if it's a duplicate
         while (nums[k] === nums[k - 1] && k > 0) k--;
         j++;
         k--;
       }
     }
-    //skip i term if it's a duplicate
     while (nums[i] === nums[i + 1] && i < len) i++;
   }
 
