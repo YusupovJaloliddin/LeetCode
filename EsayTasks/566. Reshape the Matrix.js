@@ -1,4 +1,10 @@
-function reshapeMatrix(mat, r, c) {
+/**
+ * @param {number[][]} mat
+ * @param {number} r
+ * @param {number} c
+ * @return {number[][]}
+ */
+function matrixReshape(mat, r, c) {
   // Asl matritsaning o'lchami
   const [m, n] = [mat.length, mat[0].length];
   // Matritsani tarqatish mumkinligini tekshirish
