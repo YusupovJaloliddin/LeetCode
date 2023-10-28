@@ -1,9 +1,10 @@
 function findMedianSortedArrays(nums1, nums2) {
   // nums1 va nums2 massivlarining uzunliklarini hisoblaymiz
-  const m = nums1.length;
-  const n = nums2.length;
+  const m = nums1.length; // 1-uzunlik
+  const n = nums2.length; // 2-uzunlik
 
   // qisqa vaqtlik funksiya orqali mediana topishga harakat qilamiz
+  // 
   const findMedian = (arr) => {
     const len = arr.length;
     const mid = Math.floor(len / 2);
